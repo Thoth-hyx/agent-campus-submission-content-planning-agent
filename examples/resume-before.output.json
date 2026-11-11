@@ -1,0 +1,207 @@
+{
+  "task_id": "8fc61eec0850da10c204",
+  "request": {
+    "topic": "健康生活",
+    "budget": "12.00",
+    "deadline": "2099-12-31T23:59:59+08:00"
+  },
+  "mode": "mock",
+  "status": "incomplete",
+  "reason": "达到本次模型或工具调用上限（2），可续跑",
+  "started_at": "2026-11-11T09:01:44.586941+00:00",
+  "simulated_at": "2026-11-11T09:07:44.595059+00:00",
+  "spent": "0.00",
+  "steps": {
+    "search_materials": {
+      "status": "success",
+      "attempts": [
+        {
+          "status": "success",
+          "result": {
+            "status": "success",
+            "materials": [
+              {
+                "id": "health-premium",
+                "title": "健康生活高清视觉素材",
+                "tags": [
+                  "健康",
+                  "运动"
+                ],
+                "tier": "premium",
+                "license_cost": "6"
+              },
+              {
+                "id": "health-basic",
+                "title": "健康生活基础图文素材",
+                "tags": [
+                  "健康",
+                  "运动"
+                ],
+                "tier": "basic",
+                "license_cost": "2"
+              }
+            ]
+          }
+        }
+      ],
+      "result": {
+        "status": "success",
+        "materials": [
+          {
+            "id": "health-premium",
+            "title": "健康生活高清视觉素材",
+            "tags": [
+              "健康",
+              "运动"
+            ],
+            "tier": "premium",
+            "license_cost": "6"
+          },
+          {
+            "id": "health-basic",
+            "title": "健康生活基础图文素材",
+            "tags": [
+              "健康",
+              "运动"
+            ],
+            "tier": "basic",
+            "license_cost": "2"
+          }
+        ]
+      }
+    },
+    "generate_script": {
+      "status": "failed",
+      "attempts": [
+        {
+          "status": "failed",
+          "result": {
+            "status": "failed",
+            "code": "injected_failure",
+            "reason": "模拟工具故障，本次未收费"
+          }
+        }
+      ]
+    },
+    "estimate_cost": {
+      "status": "pending",
+      "attempts": []
+    },
+    "save_plan": {
+      "status": "pending",
+      "attempts": []
+    }
+  },
+  "materials": {
+    "health-premium": {
+      "id": "health-premium",
+      "title": "健康生活高清视觉素材",
+      "tags": [
+        "健康",
+        "运动"
+      ],
+      "tier": "premium",
+      "license_cost": "6"
+    },
+    "health-basic": {
+      "id": "health-basic",
+      "title": "健康生活基础图文素材",
+      "tags": [
+        "健康",
+        "运动"
+      ],
+      "tier": "basic",
+      "license_cost": "2"
+    }
+  },
+  "script": null,
+  "quotes": {},
+  "latest_quote": null,
+  "plan": null,
+  "trace": [
+    {
+      "event": "run_started",
+      "mode": "mock",
+      "resumed": false,
+      "time": "2026-11-11T09:01:44.586941+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "mock",
+      "tool": "search_materials",
+      "arguments": {
+        "reason": "需要获取主题素材及可用替代项"
+      },
+      "reason": "需要获取主题素材及可用替代项"
+    },
+    {
+      "event": "tool_result",
+      "mode": "mock",
+      "tool": "search_materials",
+      "result": {
+        "status": "success",
+        "materials": [
+          {
+            "id": "health-premium",
+            "title": "健康生活高清视觉素材",
+            "tags": [
+              "健康",
+              "运动"
+            ],
+            "tier": "premium",
+            "license_cost": "6"
+          },
+          {
+            "id": "health-basic",
+            "title": "健康生活基础图文素材",
+            "tags": [
+              "健康",
+              "运动"
+            ],
+            "tier": "basic",
+            "license_cost": "2"
+          }
+        ]
+      },
+      "spent": "0.00",
+      "simulated_at": "2026-11-11T09:06:44.595059+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "mock",
+      "tool": "generate_script",
+      "arguments": {
+        "reason": "生成可复用的通用活动脚本",
+        "variant": "standard"
+      },
+      "reason": "生成可复用的通用活动脚本"
+    },
+    {
+      "event": "tool_result",
+      "mode": "mock",
+      "tool": "generate_script",
+      "result": {
+        "status": "failed",
+        "code": "injected_failure",
+        "reason": "模拟工具故障，本次未收费"
+      },
+      "spent": "0.00",
+      "simulated_at": "2026-11-11T09:07:44.595059+00:00"
+    },
+    {
+      "event": "run_finished",
+      "mode": "mock",
+      "status": "incomplete",
+      "reason": "达到本次模型或工具调用上限（2），可续跑"
+    }
+  ],
+  "model_calls_total": 2,
+  "tool_calls_total": 2,
+  "reused": false,
+  "model_api_cost_included": false,
+  "incomplete_details": {
+    "lowest_estimated_total": "8.00",
+    "budget_gap": "0.00",
+    "scope": "基于已检索素材和费用表的理论最低值，尚未逐项估算"
+  }
+}

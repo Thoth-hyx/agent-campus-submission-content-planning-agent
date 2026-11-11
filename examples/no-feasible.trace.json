@@ -1,0 +1,179 @@
+[
+  {
+    "event": "run_started",
+    "mode": "mock",
+    "resumed": false,
+    "time": "2026-11-11T09:01:42.441259+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "search_materials",
+    "arguments": {
+      "reason": "需要获取主题素材及可用替代项"
+    },
+    "reason": "需要获取主题素材及可用替代项"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "search_materials",
+    "result": {
+      "status": "success",
+      "materials": [
+        {
+          "id": "green-premium",
+          "title": "绿色出行高清视觉素材",
+          "tags": [
+            "绿色出行",
+            "低碳",
+            "环保"
+          ],
+          "tier": "premium",
+          "license_cost": "6"
+        },
+        {
+          "id": "green-basic",
+          "title": "绿色出行基础图文素材",
+          "tags": [
+            "绿色出行",
+            "低碳",
+            "环保"
+          ],
+          "tier": "basic",
+          "license_cost": "2"
+        }
+      ]
+    },
+    "spent": "0.00",
+    "simulated_at": "2026-11-11T09:06:42.449181+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "generate_script",
+    "arguments": {
+      "reason": "生成可复用的通用活动脚本",
+      "variant": "standard"
+    },
+    "reason": "生成可复用的通用活动脚本"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "generate_script",
+    "result": {
+      "status": "success",
+      "script": {
+        "id": "script-standard",
+        "variant": "standard",
+        "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+        "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:21:42.449181+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "arguments": {
+      "reason": "估算候选方案",
+      "material_id": "green-premium"
+    },
+    "reason": "估算候选方案"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "result": {
+      "status": "success",
+      "estimate": {
+        "material_id": "green-premium",
+        "script_id": "script-standard",
+        "spent": "2.00",
+        "remaining": {
+          "material_license": "6.00",
+          "editing": "4.00"
+        },
+        "total": "12.00",
+        "budget": "5.00",
+        "budget_gap": "7.00",
+        "fits_budget": false,
+        "estimated_finish": "2026-11-11T10:23:42.449181+00:00",
+        "fits_deadline": true
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:22:42.449181+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "arguments": {
+      "reason": "当前方案不可行，估算另一种素材",
+      "material_id": "green-basic"
+    },
+    "reason": "当前方案不可行，估算另一种素材"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "result": {
+      "status": "success",
+      "estimate": {
+        "material_id": "green-basic",
+        "script_id": "script-standard",
+        "spent": "2.00",
+        "remaining": {
+          "material_license": "2.00",
+          "editing": "4.00"
+        },
+        "total": "8.00",
+        "budget": "5.00",
+        "budget_gap": "3.00",
+        "fits_budget": false,
+        "estimated_finish": "2026-11-11T10:24:42.449181+00:00",
+        "fits_deadline": true
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:23:42.449181+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "finish",
+    "arguments": {
+      "reason": "已估算候选方案均不满足预算或截止时间"
+    },
+    "reason": "已估算候选方案均不满足预算或截止时间"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "finish",
+    "result": {
+      "status": "incomplete",
+      "reason": "已估算候选方案均不满足预算或截止时间",
+      "lowest_estimated_total": "8.00",
+      "budget_gap": "3.00",
+      "evaluated_materials": 2,
+      "retrieved_materials": 2,
+      "scope": "全部已检索素材",
+      "deadline_gap_minutes": 0
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:23:42.449181+00:00"
+  },
+  {
+    "event": "run_finished",
+    "mode": "mock",
+    "status": "incomplete",
+    "reason": "已估算候选方案均不满足预算或截止时间"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "status": "needs_input",
+  "missing_fields": [
+    "budget"
+  ],
+  "reason": "请补充必填信息",
+  "steps": {},
+  "trace": [],
+  "model_calls_total": 0,
+  "tool_calls_total": 0
+}

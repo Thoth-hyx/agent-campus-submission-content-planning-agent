@@ -1,0 +1,160 @@
+[
+  {
+    "event": "run_started",
+    "mode": "mock",
+    "resumed": false,
+    "time": "2026-11-11T09:01:41.875351+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "search_materials",
+    "arguments": {
+      "reason": "需要获取主题素材及可用替代项"
+    },
+    "reason": "需要获取主题素材及可用替代项"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "search_materials",
+    "result": {
+      "status": "success",
+      "materials": [
+        {
+          "id": "health-premium",
+          "title": "健康生活高清视觉素材",
+          "tags": [
+            "健康",
+            "运动"
+          ],
+          "tier": "premium",
+          "license_cost": "6"
+        },
+        {
+          "id": "health-basic",
+          "title": "健康生活基础图文素材",
+          "tags": [
+            "健康",
+            "运动"
+          ],
+          "tier": "basic",
+          "license_cost": "2"
+        }
+      ]
+    },
+    "spent": "0.00",
+    "simulated_at": "2026-11-11T09:06:41.883055+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "generate_script",
+    "arguments": {
+      "reason": "生成可复用的通用活动脚本",
+      "variant": "standard"
+    },
+    "reason": "生成可复用的通用活动脚本"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "generate_script",
+    "result": {
+      "status": "failed",
+      "code": "injected_failure",
+      "reason": "模拟工具故障，本次未收费"
+    },
+    "spent": "0.00",
+    "simulated_at": "2026-11-11T09:07:41.883055+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "generate_script",
+    "arguments": {
+      "reason": "常规脚本工具失败，尝试备用模板",
+      "variant": "backup"
+    },
+    "reason": "常规脚本工具失败，尝试备用模板"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "generate_script",
+    "result": {
+      "status": "success",
+      "script": {
+        "id": "script-backup",
+        "variant": "backup",
+        "content": "备用开场：今天介绍健康生活活动。\n步骤：说明活动时间、参与方式和素材画面。\n行动提示：关注活动页面，按指引参与并分享。",
+        "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:22:41.883055+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "arguments": {
+      "reason": "估算候选方案",
+      "material_id": "health-premium"
+    },
+    "reason": "估算候选方案"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "result": {
+      "status": "success",
+      "estimate": {
+        "material_id": "health-premium",
+        "script_id": "script-backup",
+        "spent": "2.00",
+        "remaining": {
+          "material_license": "6.00",
+          "editing": "4.00"
+        },
+        "total": "12.00",
+        "budget": "12.00",
+        "budget_gap": "0.00",
+        "fits_budget": true,
+        "estimated_finish": "2026-11-11T10:24:41.883055+00:00",
+        "fits_deadline": true
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:23:41.883055+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "save_plan",
+    "arguments": {
+      "reason": "最新估算满足预算与截止时间",
+      "material_id": "health-premium"
+    },
+    "reason": "最新估算满足预算与截止时间"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "save_plan",
+    "result": {
+      "status": "success",
+      "plan_id": "8fc61eec0850da10c204",
+      "estimated_cost": "12.00"
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:24:41.883055+00:00"
+  },
+  {
+    "event": "run_finished",
+    "mode": "mock",
+    "status": "completed",
+    "reason": ""
+  }
+]

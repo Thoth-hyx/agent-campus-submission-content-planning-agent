@@ -1,0 +1,33 @@
+Command: python -m unittest discover -s tests -v
+Python: 3.12.7
+
+test_budget_gap_is_available_even_if_script_cannot_start (test_agent.AgentTests.test_budget_gap_is_available_even_if_script_cannot_start) ... ok
+test_call_cap_stops_infinite_model_loop (test_agent.AgentTests.test_call_cap_stops_infinite_model_loop) ... ok
+test_cli_outputs_utf8_json (test_agent.AgentTests.test_cli_outputs_utf8_json) ... ok
+test_deadline_blocks_saving_even_with_sufficient_budget (test_agent.AgentTests.test_deadline_blocks_saving_even_with_sufficient_budget) ... ok
+test_dotenv_configuration_and_environment_override (test_agent.AgentTests.test_dotenv_configuration_and_environment_override) ... ok
+test_dotenv_placeholder_and_malformed_file_fail_without_secret_leak (test_agent.AgentTests.test_dotenv_placeholder_and_malformed_file_fail_without_secret_leak) ... ok
+test_expired_deadline_and_unknown_material (test_agent.AgentTests.test_expired_deadline_and_unknown_material) ... ok
+test_guard_rejects_save_for_unestimated_material (test_agent.AgentTests.test_guard_rejects_save_for_unestimated_material) ... ok
+test_guard_rejects_saving_over_budget_plan (test_agent.AgentTests.test_guard_rejects_saving_over_budget_plan) ... ok
+test_invalid_action_is_observed_and_never_executed (test_agent.AgentTests.test_invalid_action_is_observed_and_never_executed) ... ok
+test_live_missing_configuration_is_explicit_not_mock (test_agent.AgentTests.test_live_missing_configuration_is_explicit_not_mock) ... ok
+test_live_mode_never_replays_a_completed_mock_plan (test_agent.AgentTests.test_live_mode_never_replays_a_completed_mock_plan) ... ok
+test_live_protocol_returns_observation_and_keeps_reasoning_out_of_trace (test_agent.AgentTests.test_live_protocol_returns_observation_and_keeps_reasoning_out_of_trace) ... ok
+test_live_rejects_unencrypted_remote_endpoint (test_agent.AgentTests.test_live_rejects_unencrypted_remote_endpoint) ... ok
+test_missing_fields_do_not_call_model_or_create_database (test_agent.AgentTests.test_missing_fields_do_not_call_model_or_create_database) ... ok
+test_no_feasible_candidate_reports_gap (test_agent.AgentTests.test_no_feasible_candidate_reports_gap) ... ok
+test_normal_and_cost_accounting (test_agent.AgentTests.test_normal_and_cost_accounting) ... ok
+test_over_budget_observes_12_then_selects_8 (test_agent.AgentTests.test_over_budget_observes_12_then_selects_8) ... ok
+test_parallel_actions_are_rejected_and_returned_to_model (test_agent.AgentTests.test_parallel_actions_are_rejected_and_returned_to_model) ... ok
+test_partial_material_result_is_preserved (test_agent.AgentTests.test_partial_material_result_is_preserved) ... ok
+test_repeat_returns_saved_plan_without_calling_model_again (test_agent.AgentTests.test_repeat_returns_saved_plan_without_calling_model_again) ... ok
+test_repeat_warns_if_remaining_work_no_longer_fits_deadline (test_agent.AgentTests.test_repeat_warns_if_remaining_work_no_longer_fits_deadline) ... ok
+test_resume_after_failure_reuses_successful_steps (test_agent.AgentTests.test_resume_after_failure_reuses_successful_steps) ... ok
+test_tool_failure_kept_and_backup_used_without_losing_search (test_agent.AgentTests.test_tool_failure_kept_and_backup_used_without_losing_search) ... ok
+test_validation_rejects_invalid_budget_and_naive_datetime (test_agent.AgentTests.test_validation_rejects_invalid_budget_and_naive_datetime) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.691s
+
+OK

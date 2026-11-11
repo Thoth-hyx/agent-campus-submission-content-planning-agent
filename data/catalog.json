@@ -1,0 +1,16 @@
+{
+  "materials": [
+    {"id": "green-premium", "title": "绿色出行高清视觉素材", "tags": ["绿色出行", "低碳", "环保"], "tier": "premium", "license_cost": "6"},
+    {"id": "green-basic", "title": "绿色出行基础图文素材", "tags": ["绿色出行", "低碳", "环保"], "tier": "basic", "license_cost": "2"},
+    {"id": "health-premium", "title": "健康生活高清视觉素材", "tags": ["健康", "运动"], "tier": "premium", "license_cost": "6"},
+    {"id": "health-basic", "title": "健康生活基础图文素材", "tags": ["健康", "运动"], "tier": "basic", "license_cost": "2"}
+  ],
+  "tools": {
+    "search_materials": {"cost": "0", "minutes": 5},
+    "generate_script": {"cost": "2", "minutes": 15},
+    "estimate_cost": {"cost": "0", "minutes": 1},
+    "save_plan": {"cost": "0", "minutes": 1},
+    "editing": {"cost": "4", "minutes": 60},
+    "failed_attempt": {"cost": "0", "minutes": 1}
+  }
+}

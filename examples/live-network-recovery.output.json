@@ -1,0 +1,427 @@
+{
+  "task_id": "d41d3c4fea9ea6422ebd",
+  "request": {
+    "topic": "绿色出行",
+    "budget": "12.00",
+    "deadline": "2099-12-31T23:59:59+08:00"
+  },
+  "mode": "live",
+  "status": "completed",
+  "reason": "",
+  "started_at": "2026-11-11T08:56:42.145170+00:00",
+  "simulated_at": "2026-11-11T09:19:09.209929+00:00",
+  "spent": "2.00",
+  "steps": {
+    "search_materials": {
+      "status": "success",
+      "attempts": [
+        {
+          "status": "success",
+          "result": {
+            "status": "success",
+            "materials": [
+              {
+                "id": "green-premium",
+                "title": "绿色出行高清视觉素材",
+                "tags": [
+                  "绿色出行",
+                  "低碳",
+                  "环保"
+                ],
+                "tier": "premium",
+                "license_cost": "6"
+              },
+              {
+                "id": "green-basic",
+                "title": "绿色出行基础图文素材",
+                "tags": [
+                  "绿色出行",
+                  "低碳",
+                  "环保"
+                ],
+                "tier": "basic",
+                "license_cost": "2"
+              }
+            ]
+          }
+        }
+      ],
+      "result": {
+        "status": "success",
+        "materials": [
+          {
+            "id": "green-premium",
+            "title": "绿色出行高清视觉素材",
+            "tags": [
+              "绿色出行",
+              "低碳",
+              "环保"
+            ],
+            "tier": "premium",
+            "license_cost": "6"
+          },
+          {
+            "id": "green-basic",
+            "title": "绿色出行基础图文素材",
+            "tags": [
+              "绿色出行",
+              "低碳",
+              "环保"
+            ],
+            "tier": "basic",
+            "license_cost": "2"
+          }
+        ]
+      }
+    },
+    "generate_script": {
+      "status": "success",
+      "attempts": [
+        {
+          "status": "success",
+          "result": {
+            "status": "success",
+            "script": {
+              "id": "script-standard",
+              "variant": "standard",
+              "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+              "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+            }
+          }
+        }
+      ],
+      "result": {
+        "status": "success",
+        "script": {
+          "id": "script-standard",
+          "variant": "standard",
+          "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+          "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+        }
+      }
+    },
+    "estimate_cost": {
+      "status": "success",
+      "attempts": [
+        {
+          "status": "success",
+          "result": {
+            "status": "success",
+            "estimate": {
+              "material_id": "green-premium",
+              "script_id": "script-standard",
+              "spent": "2.00",
+              "remaining": {
+                "material_license": "6.00",
+                "editing": "4.00"
+              },
+              "total": "12.00",
+              "budget": "12.00",
+              "budget_gap": "0.00",
+              "fits_budget": true,
+              "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+              "fits_deadline": true
+            }
+          }
+        }
+      ],
+      "result": {
+        "status": "success",
+        "estimate": {
+          "material_id": "green-premium",
+          "script_id": "script-standard",
+          "spent": "2.00",
+          "remaining": {
+            "material_license": "6.00",
+            "editing": "4.00"
+          },
+          "total": "12.00",
+          "budget": "12.00",
+          "budget_gap": "0.00",
+          "fits_budget": true,
+          "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+          "fits_deadline": true
+        }
+      }
+    },
+    "save_plan": {
+      "status": "success",
+      "attempts": [
+        {
+          "status": "success",
+          "result": {
+            "status": "success",
+            "plan_id": "d41d3c4fea9ea6422ebd",
+            "estimated_cost": "12.00"
+          }
+        }
+      ],
+      "result": {
+        "status": "success",
+        "plan_id": "d41d3c4fea9ea6422ebd",
+        "estimated_cost": "12.00"
+      }
+    }
+  },
+  "materials": {
+    "green-premium": {
+      "id": "green-premium",
+      "title": "绿色出行高清视觉素材",
+      "tags": [
+        "绿色出行",
+        "低碳",
+        "环保"
+      ],
+      "tier": "premium",
+      "license_cost": "6"
+    },
+    "green-basic": {
+      "id": "green-basic",
+      "title": "绿色出行基础图文素材",
+      "tags": [
+        "绿色出行",
+        "低碳",
+        "环保"
+      ],
+      "tier": "basic",
+      "license_cost": "2"
+    }
+  },
+  "script": {
+    "id": "script-standard",
+    "variant": "standard",
+    "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+    "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+  },
+  "quotes": {
+    "green-premium": {
+      "material_id": "green-premium",
+      "script_id": "script-standard",
+      "spent": "2.00",
+      "remaining": {
+        "material_license": "6.00",
+        "editing": "4.00"
+      },
+      "total": "12.00",
+      "budget": "12.00",
+      "budget_gap": "0.00",
+      "fits_budget": true,
+      "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+      "fits_deadline": true
+    }
+  },
+  "latest_quote": {
+    "material_id": "green-premium",
+    "script_id": "script-standard",
+    "spent": "2.00",
+    "remaining": {
+      "material_license": "6.00",
+      "editing": "4.00"
+    },
+    "total": "12.00",
+    "budget": "12.00",
+    "budget_gap": "0.00",
+    "fits_budget": true,
+    "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+    "fits_deadline": true
+  },
+  "plan": {
+    "plan_id": "d41d3c4fea9ea6422ebd",
+    "topic": "绿色出行",
+    "material": {
+      "id": "green-premium",
+      "title": "绿色出行高清视觉素材",
+      "tags": [
+        "绿色出行",
+        "低碳",
+        "环保"
+      ],
+      "tier": "premium",
+      "license_cost": "6"
+    },
+    "script": {
+      "id": "script-standard",
+      "variant": "standard",
+      "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+      "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+    },
+    "estimated_cost": "12.00",
+    "cost_breakdown": {
+      "spent": "2.00",
+      "material_license": "6.00",
+      "editing": "4.00"
+    },
+    "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+    "deadline": "2099-12-31T23:59:59+08:00",
+    "remaining_work": [
+      {
+        "step": "内容编辑与制作",
+        "status": "pending",
+        "estimated_minutes": 60
+      }
+    ]
+  },
+  "trace": [
+    {
+      "event": "run_started",
+      "mode": "live",
+      "resumed": false,
+      "time": "2026-11-11T08:56:42.145170+00:00"
+    },
+    {
+      "event": "model_error",
+      "mode": "live",
+      "reason": "模型接口连接失败或超时，请检查网络与接口地址"
+    },
+    {
+      "event": "run_finished",
+      "mode": "live",
+      "status": "incomplete",
+      "reason": "模型接口连接失败或超时，请检查网络与接口地址"
+    },
+    {
+      "event": "run_started",
+      "mode": "live",
+      "resumed": true,
+      "time": "2026-11-11T08:57:07.928652+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "live",
+      "tool": "search_materials",
+      "arguments": {
+        "reason": "先检索与“绿色出行”主题匹配的可用素材。"
+      },
+      "reason": "先检索与“绿色出行”主题匹配的可用素材。"
+    },
+    {
+      "event": "tool_result",
+      "mode": "live",
+      "tool": "search_materials",
+      "result": {
+        "status": "success",
+        "materials": [
+          {
+            "id": "green-premium",
+            "title": "绿色出行高清视觉素材",
+            "tags": [
+              "绿色出行",
+              "低碳",
+              "环保"
+            ],
+            "tier": "premium",
+            "license_cost": "6"
+          },
+          {
+            "id": "green-basic",
+            "title": "绿色出行基础图文素材",
+            "tags": [
+              "绿色出行",
+              "低碳",
+              "环保"
+            ],
+            "tier": "basic",
+            "license_cost": "2"
+          }
+        ]
+      },
+      "spent": "0.00",
+      "simulated_at": "2026-11-11T09:02:09.209929+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "live",
+      "tool": "generate_script",
+      "arguments": {
+        "reason": "生成“绿色出行”主题的通用活动脚本，供后续方案复用。",
+        "variant": "standard"
+      },
+      "reason": "生成“绿色出行”主题的通用活动脚本，供后续方案复用。"
+    },
+    {
+      "event": "tool_result",
+      "mode": "live",
+      "tool": "generate_script",
+      "result": {
+        "status": "success",
+        "script": {
+          "id": "script-standard",
+          "variant": "standard",
+          "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+          "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+        }
+      },
+      "spent": "2.00",
+      "simulated_at": "2026-11-11T09:17:09.209929+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "live",
+      "tool": "estimate_cost",
+      "arguments": {
+        "reason": "估算质量更高的高级素材方案总费用与完成时间。",
+        "material_id": "green-premium"
+      },
+      "reason": "估算质量更高的高级素材方案总费用与完成时间。"
+    },
+    {
+      "event": "tool_result",
+      "mode": "live",
+      "tool": "estimate_cost",
+      "result": {
+        "status": "success",
+        "estimate": {
+          "material_id": "green-premium",
+          "script_id": "script-standard",
+          "spent": "2.00",
+          "remaining": {
+            "material_license": "6.00",
+            "editing": "4.00"
+          },
+          "total": "12.00",
+          "budget": "12.00",
+          "budget_gap": "0.00",
+          "fits_budget": true,
+          "estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+          "fits_deadline": true
+        }
+      },
+      "spent": "2.00",
+      "simulated_at": "2026-11-11T09:18:09.209929+00:00"
+    },
+    {
+      "event": "model_action",
+      "mode": "live",
+      "tool": "save_plan",
+      "arguments": {
+        "reason": "高级素材方案费用 12.00 元未超预算且时间可行，予以保存。",
+        "material_id": "green-premium"
+      },
+      "reason": "高级素材方案费用 12.00 元未超预算且时间可行，予以保存。"
+    },
+    {
+      "event": "tool_result",
+      "mode": "live",
+      "tool": "save_plan",
+      "result": {
+        "status": "success",
+        "plan_id": "d41d3c4fea9ea6422ebd",
+        "estimated_cost": "12.00"
+      },
+      "spent": "2.00",
+      "simulated_at": "2026-11-11T09:19:09.209929+00:00"
+    },
+    {
+      "event": "run_finished",
+      "mode": "live",
+      "status": "completed",
+      "reason": ""
+    }
+  ],
+  "model_calls_total": 5,
+  "tool_calls_total": 4,
+  "reused": true,
+  "model_api_cost_included": false,
+  "revalidated_estimated_finish": "2026-11-11T10:19:09.209929+00:00",
+  "deadline_still_feasible": true
+}

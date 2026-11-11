@@ -1,0 +1,208 @@
+[
+  {
+    "event": "run_started",
+    "mode": "mock",
+    "resumed": false,
+    "time": "2026-11-11T09:01:43.888562+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "search_materials",
+    "arguments": {
+      "reason": "需要获取主题素材及可用替代项"
+    },
+    "reason": "需要获取主题素材及可用替代项"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "search_materials",
+    "result": {
+      "status": "partial",
+      "materials": [
+        {
+          "id": "green-premium",
+          "title": "绿色出行高清视觉素材",
+          "tags": [
+            "绿色出行",
+            "低碳",
+            "环保"
+          ],
+          "tier": "premium",
+          "license_cost": "6"
+        }
+      ],
+      "warning": "部分素材源超时，返回已获得的素材"
+    },
+    "spent": "0.00",
+    "simulated_at": "2026-11-11T09:06:43.897658+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "search_materials",
+    "arguments": {
+      "reason": "需要获取主题素材及可用替代项"
+    },
+    "reason": "需要获取主题素材及可用替代项"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "search_materials",
+    "result": {
+      "status": "success",
+      "materials": [
+        {
+          "id": "green-premium",
+          "title": "绿色出行高清视觉素材",
+          "tags": [
+            "绿色出行",
+            "低碳",
+            "环保"
+          ],
+          "tier": "premium",
+          "license_cost": "6"
+        },
+        {
+          "id": "green-basic",
+          "title": "绿色出行基础图文素材",
+          "tags": [
+            "绿色出行",
+            "低碳",
+            "环保"
+          ],
+          "tier": "basic",
+          "license_cost": "2"
+        }
+      ]
+    },
+    "spent": "0.00",
+    "simulated_at": "2026-11-11T09:11:43.897658+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "generate_script",
+    "arguments": {
+      "reason": "生成可复用的通用活动脚本",
+      "variant": "standard"
+    },
+    "reason": "生成可复用的通用活动脚本"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "generate_script",
+    "result": {
+      "status": "success",
+      "script": {
+        "id": "script-standard",
+        "variant": "standard",
+        "content": "开场：从身边的小事认识绿色出行。\n主体：用一个具体场景展示参与方式与活动亮点。\n结尾：邀请观众参与绿色出行活动并分享体验。",
+        "note": "合成示例文案，发布前需人工审核事实和品牌要求。"
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:26:43.897658+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "arguments": {
+      "reason": "估算候选方案",
+      "material_id": "green-premium"
+    },
+    "reason": "估算候选方案"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "result": {
+      "status": "success",
+      "estimate": {
+        "material_id": "green-premium",
+        "script_id": "script-standard",
+        "spent": "2.00",
+        "remaining": {
+          "material_license": "6.00",
+          "editing": "4.00"
+        },
+        "total": "12.00",
+        "budget": "10.00",
+        "budget_gap": "2.00",
+        "fits_budget": false,
+        "estimated_finish": "2026-11-11T10:28:43.897658+00:00",
+        "fits_deadline": true
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:27:43.897658+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "arguments": {
+      "reason": "当前方案不可行，估算另一种素材",
+      "material_id": "green-basic"
+    },
+    "reason": "当前方案不可行，估算另一种素材"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "estimate_cost",
+    "result": {
+      "status": "success",
+      "estimate": {
+        "material_id": "green-basic",
+        "script_id": "script-standard",
+        "spent": "2.00",
+        "remaining": {
+          "material_license": "2.00",
+          "editing": "4.00"
+        },
+        "total": "8.00",
+        "budget": "10.00",
+        "budget_gap": "0.00",
+        "fits_budget": true,
+        "estimated_finish": "2026-11-11T10:29:43.897658+00:00",
+        "fits_deadline": true
+      }
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:28:43.897658+00:00"
+  },
+  {
+    "event": "model_action",
+    "mode": "mock",
+    "tool": "save_plan",
+    "arguments": {
+      "reason": "最新估算满足预算与截止时间",
+      "material_id": "green-basic"
+    },
+    "reason": "最新估算满足预算与截止时间"
+  },
+  {
+    "event": "tool_result",
+    "mode": "mock",
+    "tool": "save_plan",
+    "result": {
+      "status": "success",
+      "plan_id": "2639045568dc758d85be",
+      "estimated_cost": "8.00"
+    },
+    "spent": "2.00",
+    "simulated_at": "2026-11-11T09:29:43.897658+00:00"
+  },
+  {
+    "event": "run_finished",
+    "mode": "mock",
+    "status": "completed",
+    "reason": ""
+  }
+]
